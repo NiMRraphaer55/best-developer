@@ -1,0 +1,270 @@
+/* Reset & Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 5%;
+  background-color: white;
+}
+
+header .logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  
+  text-decoration: overline;
+}
+
+/* Hero / Content */
+.content-container {
+  background-color: #4CAF50;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.content-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Slider */
+.slider {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: 30px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+.slider img {
+  width: 70px;
+  border-radius: 50%;
+  padding: 10px;
+  background: white;
+  margin-top: -50px;
+}
+
+.description {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #000;
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.arrows span {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Corner */
+.corner-shape {
+  width: 90px;
+  height: 130px;
+  background-color: #210d2f;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 60%, 0 70%);
+  position: absolute;
+  right: 10px;
+  top: 0;
+  display: block;
+}
+
+/* Footer */
+.footer-content {
+  background-color: #2A1835;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-content h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.footer-content .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.footer-content .social-media a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer-content .social-media a:hover {
+  color: #0073e6;
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #210d2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loader h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Paragraphs */
+p {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+/* 🌐 Responsive Media Queries */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 20px;
+  }
+
+  .slider {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .content-container h1 {
+    font-size: 2rem;
+  }
+
+  .corner-shape {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo img {
+    max-width: 80px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .footer-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer-content .social-media a {
+    font-size: 20px;
+  }
+
+  .content-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .arrows span {
+    font-size: 20px;
+  }
+}
