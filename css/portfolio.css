@@ -233,3 +233,23 @@ p {
     display: none;
   }
 }
+
+.body{
+h1 {
+  animation: moveRightToLeft 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+  font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      transition: background-color 0.3s ease;
+    }
+    #colorPicker {
+      padding: 10px;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }

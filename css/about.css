@@ -133,6 +133,8 @@ margin-top: -180px;
   flex-direction: column;
   transition: transform 0.3s ease;
   text-align: center;
+  align-items: center;
+  gap: 20px ;
 }
 
 .container .con-1:hover,
